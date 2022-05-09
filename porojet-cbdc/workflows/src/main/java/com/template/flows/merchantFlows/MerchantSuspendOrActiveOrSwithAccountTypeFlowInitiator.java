@@ -23,7 +23,6 @@ import java.util.List;
 @StartableByRPC
 public class MerchantSuspendOrActiveOrSwithAccountTypeFlowInitiator  extends FlowLogic<String> {
 
-
     private SuspendOrActiveOrSwithAccountType suspendOrActiveOrSwithAccountType;
     private final ProgressTracker progressTracker = new ProgressTracker();
     public MerchantSuspendOrActiveOrSwithAccountTypeFlowInitiator(SuspendOrActiveOrSwithAccountType suspendOrActiveOrSwithAccountType) {

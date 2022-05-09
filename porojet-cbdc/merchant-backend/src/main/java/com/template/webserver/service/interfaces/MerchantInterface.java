@@ -16,6 +16,6 @@ public interface MerchantInterface {
     int sendEmailVerification(String email) throws MessagingException, IOException;
 
     int suspendOrActiveOrSwithAccountType(SuspendOrActiveOrSwithAccountType suspendOrActiveOrSwithAccountType);
-    AccountIdAndPassword createOtherEndUserCount(NewMerchantAccount newMerchantAccount);
+    AccountIdAndPassword createOtherMerchantAccount(NewMerchantAccount newMerchantAccount);
 
 }

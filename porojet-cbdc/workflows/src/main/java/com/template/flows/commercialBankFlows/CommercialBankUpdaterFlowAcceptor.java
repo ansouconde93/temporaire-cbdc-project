@@ -1,7 +1,7 @@
 package com.template.flows.commercialBankFlows;
 
 import co.paralleluniverse.fibers.Suspendable;
-import com.template.states.CommercialBankStoreState;
+import com.template.states.commercialBankStates.CommercialBankState;
 import net.corda.core.contracts.ContractState;
 import net.corda.core.crypto.SecureHash;
 import net.corda.core.flows.*;
@@ -29,8 +29,8 @@ public class CommercialBankUpdaterFlowAcceptor extends FlowLogic<Void> {
             @Override
             protected void checkTransaction(@NotNull SignedTransaction stx) throws FlowException {
                 requireThat(require -> {
-                    ContractState commercialBankStoreState = (CommercialBankStoreState) stx.getTx().getOutputs().get(0).getData();
-                    require.using("invalid state", commercialBankStoreState instanceof CommercialBankStoreState);
+                    ContractState commercialBankState = stx.getTx().getOutputs().get(0).getData();
+                    require.using("invalid state", commercialBankState instanceof CommercialBankState);
                     return null;
 
                 });

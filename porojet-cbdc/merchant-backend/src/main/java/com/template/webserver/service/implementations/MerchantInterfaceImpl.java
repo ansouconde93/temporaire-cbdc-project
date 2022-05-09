@@ -164,7 +164,7 @@ public class MerchantInterfaceImpl implements MerchantInterface {
     }
 
     @Override
-    public AccountIdAndPassword createOtherEndUserCount(NewMerchantAccount newMerchantAccount) {
+    public AccountIdAndPassword createOtherMerchantAccount(NewMerchantAccount newMerchantAccount) {
         try {
             AccountIdAndPassword compteIdAndPassword  = nodeRPCConnection.proxy.startTrackedFlowDynamic(
                     MerchantOtherAccountCreatorFlowInitiator.class,newMerchantAccount).getReturnValue().get();

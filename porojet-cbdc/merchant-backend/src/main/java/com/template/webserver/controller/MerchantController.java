@@ -49,7 +49,7 @@ public class MerchantController {
     @ApiOperation(value = "Endpoint: /merchant/saveotheraccount crée un autre compte d'une entreprise dans le réseau. Il retourne: un objet {AccountId, password } si ajout reussit et sinon null.")
     @PostMapping("/merchant/saveotheraccount")
     public AccountIdAndPassword createOtherMerchantCount(@RequestBody NewMerchantAccount newMerchantAccount){
-        return merchantInterface.createOtherEndUserCount(newMerchantAccount);
+        return merchantInterface.createOtherMerchantAccount(newMerchantAccount);
     }
 
     @ApiOperation(value = "Endpoint: /merchant/deleteoractiveorswithacountytype desactif le compte du merchant dans le réseau. Il retourne un int: 1 desactivation reussie et 0 sinon . En cas desactivation reussie,un email est envoyer au responsable de la banque centrale.")

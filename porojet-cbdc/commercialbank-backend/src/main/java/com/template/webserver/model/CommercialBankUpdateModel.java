@@ -1,7 +1,6 @@
 package com.template.webserver.model;
 
-
-import com.template.model.CommercialBank;
+import com.template.model.commercialBank.CommercialBankData;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,12 +9,8 @@ import net.corda.core.serialization.CordaSerializable;
 @Data
 @NoArgsConstructor
 @CordaSerializable
+@AllArgsConstructor
 public class CommercialBankUpdateModel {
-    private CommercialBank commercialBank;
+    private CommercialBankData commercialBankData;
     private String commercialBankAccountId;
-
-    public CommercialBankUpdateModel(CommercialBank commercialBank, String commercialBankAccountId) {
-        this.commercialBank = commercialBank;
-        this.commercialBankAccountId = commercialBankAccountId;
-    }
 }
